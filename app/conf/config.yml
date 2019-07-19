@@ -1,0 +1,28 @@
+repository:
+  url: "リポジトリURL"
+  name: "origin"
+
+analyzer:
+  analyzers:
+    - type: "BranchNameAnalyzer"
+      params:
+        validBranches:
+          - "origin/master"
+          - "origin/feature/.*"
+    - type: "BranchLifespanAnalyzer"
+      params:
+        srcBranch: "origin/master"
+        targetBranches:
+          - "origin/feature/.*"
+        lifespan: 5
+    - type: "DeadBranchAnalyzer"
+      params:
+        targetBranches:
+          - "origin/master"
+          - "origin/feature/.*"
+        deadline: 1
+    - type: "ConflictAnalyzer"
+      params:
+        srcBranch: "origin/master"
+        targetBranches:
+          - "origin/feature/.*"

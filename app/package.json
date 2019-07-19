@@ -1,0 +1,27 @@
+{
+  "name": "GitAnalyzer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/js-yaml": "^3.12.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.12",
+    "chai": "^4.2.0",
+    "del": "^5.0.0",
+    "istanbul": "^0.4.5",
+    "js-yaml": "^3.13.1",
+    "mocha": "^6.2.0",
+    "postinstall-build": "^5.0.3",
+    "remap-istanbul": "^0.13.0",
+    "simple-git": "^1.118.0",
+    "ts-node": "^8.3.0",
+    "typemoq": "^2.1.0",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  }
+}
